@@ -35,3 +35,7 @@ os.chdir('/content/gdrive/MyDrive/MRTS/mrts')
 We use cupy (a python built-in CUDA programming) to speed up the matrix operation,
 with a 10000x10000 matrix, we only need 1 min to compute MRTS basis.
 Make sure to turn on your GPU and set argumnet ```-g True```
+
+### TO DO
+
+- [x] The algorithm is based on dissimilarity measurement, and to make the code easy to read, we calculate dissimilarity matrix directly, however, it is not necessary to calculate the dissimilarity matrix, we can use iteration to calculate the distance and overcome the ''out of memory'' problem alternatively.
