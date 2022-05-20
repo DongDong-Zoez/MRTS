@@ -8,6 +8,21 @@ realize multi-resolution thin plate spline basis function in python
 git clone https://github.com/DongDong-Zoez/MRTS
 python demo.py
 ```
+
+### On colab
+
+
+
+```python
+from google.colab import drive
+drive.mount('/content/gdrive')
+
+import os 
+os.chdir('/content/gdrive/MyDrive/MRTS/mrts')
+
+!python basis.py -g True -c 'ctp.csv' -l 'ctp.csv'
+```
+
 ## Material
 
 MRTS (multi-resolution thin plate spline) basis function that can generate basis function according to the control points and saptial location
