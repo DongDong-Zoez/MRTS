@@ -18,16 +18,17 @@ git clone https://github.com/DongDong-Zoez/MRTS
 python demo.py
 ```
 
-### On colab
+### On google colab
 
 ```python
 from google.colab import drive
 drive.mount('/content/gdrive')
 
-import os 
-os.chdir('/content/gdrive/MyDrive/MRTS/mrts')
+%cd '/content/gdrive/MyDrive'
+!git clone https://github.com/DongDong-Zoez/MRTS 
 
-!python basis.py -g True -c 'ctp.csv' -l 'ctp.csv'
+%cd 'MRTS/mrts'
+!python basis.py -g False -c 'ctp.csv' -l 'ctp.csv'
 ```
 
 ### Speed up
