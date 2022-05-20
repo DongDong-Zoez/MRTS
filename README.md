@@ -14,7 +14,9 @@ More on [paper](https://arxiv.org/pdf/1504.05659.pdf?fbclid=IwAR3WLhl5T150W1mmjB
 ## Usage
 
 ```python
+import os
 git clone https://github.com/DongDong-Zoez/MRTS
+os.chdir('MRTS/mrts')
 python demo.py
 ```
 
