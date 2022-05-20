@@ -1,6 +1,15 @@
 # MRTS
 realize multi-resolution thin plate spline basis function in python 
 
+## Material
+
+MRTS (multi-resolution thin plate spline) basis function that can generate basis function according to the control points and saptial location
+
+More on [paper](https://arxiv.org/pdf/1504.05659.pdf?fbclid=IwAR3WLhl5T150W1mmjBK2PShIPXmnOpyCJQ9uQnY81AxDcd2GlW2tFzp0A6g)
+
+![](https://github.com/DongDong-Zoez/MRTS/blob/dc001e079b5b0f7e3241232a934b0625f8f7262b/assets/mrts.jpg)
+
+![](https://github.com/DongDong-Zoez/MRTS/blob/dc001e079b5b0f7e3241232a934b0625f8f7262b/assets/tps.jpg)
 
 ## Usage
 
@@ -10,8 +19,6 @@ python demo.py
 ```
 
 ### On colab
-
-
 
 ```python
 from google.colab import drive
@@ -23,12 +30,8 @@ os.chdir('/content/gdrive/MyDrive/MRTS/mrts')
 !python basis.py -g True -c 'ctp.csv' -l 'ctp.csv'
 ```
 
-## Material
+### Speed up
 
-MRTS (multi-resolution thin plate spline) basis function that can generate basis function according to the control points and saptial location
-
-More on [paper](https://arxiv.org/pdf/1504.05659.pdf?fbclid=IwAR3WLhl5T150W1mmjBK2PShIPXmnOpyCJQ9uQnY81AxDcd2GlW2tFzp0A6g)
-
-![](https://github.com/DongDong-Zoez/MRTS/blob/dc001e079b5b0f7e3241232a934b0625f8f7262b/assets/mrts.jpg)
-
-![](https://github.com/DongDong-Zoez/MRTS/blob/dc001e079b5b0f7e3241232a934b0625f8f7262b/assets/tps.jpg)
+We use cupy (a python built-in CUDA programming) to speed up the matrix operation,
+with a 10000x10000 matrix, we only need 1 min to compute MRTS basis.
+Make sure to turn on your GPU and set argumnet ```-g True```
